@@ -12,7 +12,7 @@ pipeline {
                 scannerHome = tool 'SONAR_SCANNER'
             }
             steps {
-                withSonarQubeEnv('SONAR_LOCAL') {
+                withSonarQubeEnv('SONAR_SCANNER') {
                     bat "${scannerHome}/bin/sonar-scanner -e -Dsonar.projectKey=pipeline -Dsonar.host.url=http://localhost:9000 -Dsonar.login=79b084e11b3be5123e01e17313feb01161770909"
                 }
             }
