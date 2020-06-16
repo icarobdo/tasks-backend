@@ -13,7 +13,7 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv('SONAR_LOCAL') {
-                    bat "${scannerHome}/bin/sonar-scanner -e sonar.projectKey=PIpeline sonar.host.url=http://localhost:9000 sonar.login=c593f4a78b82641b73811adda64e3a789db96b18"
+                    bat "${scannerHome}/bin/sonar-scanner -e sonar.projectKey=pipeline sonar.host.url=http://localhost:9000 sonar.login=c593f4a78b82641b73811adda64e3a789db96b18"
                 }
             }
         }
